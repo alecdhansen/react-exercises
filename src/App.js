@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import BlogPostForm from "./components/BlogPost/BlogPostForm";
-import ContactListForm from "./components/ContactListForm/ContactListForm";
+import ContactListApp from "./components/ContactListApp/ContactListApp";
 import BlogReadingSite from "./components/BlogReadingSite/BlogReadingSite";
 import BookmarkApp from "./components/BookmarkApp/BoomarkApp";
 import BlogCMS from "./components/BlogCMS/BlogCMS";
@@ -16,7 +16,7 @@ function App() {
   if (page === "BlogPostForm") {
     content = <BlogPostForm />;
   } else if (page === "ContactListForm") {
-    content = <ContactListForm />;
+    content = <ContactListApp />;
   } else if (page === "BlogReadingSite") {
     content = <BlogReadingSite />;
   } else if (page === "BookmarkApp") {

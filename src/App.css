@@ -28,3 +28,22 @@
 .btn1 {
   width: 100px;
 }
+.div2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.table2 {
+  width: 80%;
+  margin-top: 50px;
+}
+.head2 {
+  background-color: rgb(157, 221, 151);
+}
+.body2 {
+  background-color: #fff;
+}
+.form2 {
+  width: 30%;
+}
