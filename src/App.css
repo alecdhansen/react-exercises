@@ -82,3 +82,32 @@
   display: flex;
   justify-content: space-around;
 }
+.div4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form4 {
+  width: 40%;
+}
+.filter4 {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.filter4 > p {
+  margin: 0px 10px 0px 0px;
+}
+.btn1-4 {
+  margin-right: 5px;
+}
+.btn2-4 {
+  margin-right: 5px;
+}
+.listgroup4 {
+  margin-top: 5px;
+  min-width: 400px;
+  text-align: left;
+}
