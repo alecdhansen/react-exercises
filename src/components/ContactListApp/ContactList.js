@@ -2,7 +2,7 @@ import NameForm from "./NameForm";
 import NameTable from "./NameTable";
 import { useState } from "react";
 
-const INITIAL_TABLE = [
+const INITIAL_CONTACT = [
   {
     firstName: "Allen",
     lastName: "Bates",
@@ -26,17 +26,17 @@ const INITIAL_TABLE = [
   },
 ];
 
-function ContactListApp() {
-  const [table, setTable] = useState(INITIAL_TABLE);
-  const addTable = (newTable) => {
-    setTable([...table, newTable]);
+function ContactList() {
+  const [contact, setContact] = useState(INITIAL_CONTACT);
+  const addContact = (newContact) => {
+    setContact([...contact, newContact]);
   };
   return (
     <div className="contact-list-form">
-      <NameForm addTable={addTable} />
-      <NameTable table={table} />
+      <NameForm addContact={addContact} />
+      <NameTable contact={contact} />
     </div>
   );
 }
 
-export default ContactListApp;
+export default ContactList;

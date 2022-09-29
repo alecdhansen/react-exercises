@@ -12,7 +12,7 @@ function BlogList({ blogs, displayPost }) {
       </ListGroup.Item>
     </div>
   ));
-  return <ListGroup>{blogPosts}</ListGroup>;
+  return <ListGroup classname="ul">{blogPosts}</ListGroup>;
 }
 
 export default BlogList;

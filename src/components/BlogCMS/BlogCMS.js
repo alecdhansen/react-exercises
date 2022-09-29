@@ -1,4 +1,4 @@
 function BlogCMS() {
-  return <div className="blog-cms">This is the BlogCMS</div>;
+  return <div className="blog-cms">This will be the BlogCMS</div>;
 }
 export default BlogCMS;

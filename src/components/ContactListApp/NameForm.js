@@ -5,27 +5,29 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 
 const INITIAL_STATE = {
+  //could also set to DEFAULT_CONTACT or something similar!//
   firstName: "",
   lastName: "",
   address: "",
   number: "",
 };
-function NameForm({ addTable }) {
+function NameForm({ addContact }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
   const [number, setNumber] = useState("");
   const [state, setState] = useState(INITIAL_STATE);
+  const [contact, setContact] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newTable = {
+    const newContact = {
       firstName,
       lastName,
       address,
       number,
       id: nanoid(),
     };
-    addTable(newTable);
+    addContact(newContact);
     setState(INITIAL_STATE);
   };
 
@@ -43,6 +45,7 @@ function NameForm({ addTable }) {
             id="firstName"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
+            required
           />
         </InputGroup>
         <InputGroup className="mb-3">
@@ -56,6 +59,7 @@ function NameForm({ addTable }) {
             id="lastName"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
+            required
           />
         </InputGroup>
         <InputGroup className="mb-3">
@@ -69,6 +73,7 @@ function NameForm({ addTable }) {
             id="address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
+            required
           />
         </InputGroup>
         <InputGroup className="mb-3">
@@ -80,9 +85,10 @@ function NameForm({ addTable }) {
             type="tel"
             name="number"
             id="number"
-            placeholder="Phone number..."
+            placeholder="xxx-xxx-xxxx..."
             value={number}
             onChange={(e) => setNumber(e.target.value)}
+            required
           />
         </InputGroup>
         <Button variant="success" className="btn2" type="submit">

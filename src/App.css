@@ -1,3 +1,8 @@
+:root {
+  --green: rgb(158, 228, 152);
+  --darkgreen: rgb(132, 189, 127);
+}
+
 .App {
   text-align: center;
 }
@@ -8,12 +13,13 @@
   padding: 0px 25px;
 }
 .title {
-  color: rgb(157, 221, 151);
+  color: var(--green);
   font-size: 40px;
   cursor: default;
+  text-shadow: 1px 1px #000;
 }
 .title:hover {
-  color: rgb(157, 221, 151);
+  color: var(--darkgreen);
 }
 .blog-post-form {
   display: flex;
@@ -27,6 +33,13 @@
 }
 .btn1 {
   width: 100px;
+  background-color: var(--darkgreen);
+  border: none;
+}
+.h2-1 {
+  margin-bottom: 30px;
+  color: #000;
+  text-shadow: 1px 1px var(--darkgreen);
 }
 .div2 {
   display: flex;
@@ -39,7 +52,7 @@
   margin-top: 50px;
 }
 .head2 {
-  background-color: rgb(157, 221, 151);
+  background-color: var(--darkgreen);
 }
 .body2 {
   background-color: #fff;
@@ -47,10 +60,25 @@
 .form2 {
   width: 30%;
 }
+.btn2 {
+  background-color: var(--darkgreen);
+  border: none;
+}
 .div3 {
   display: flex;
   justify-content: center;
 }
+.div33 {
+  width: 50%;
+}
 .blog-list3 {
-  width: 80%;
+  width: 100%;
+  cursor: grab;
+}
+
+.article-content3 {
+}
+.blog-reading-site {
+  display: flex;
+  justify-content: space-around;
 }

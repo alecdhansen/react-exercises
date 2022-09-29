@@ -1,4 +1,4 @@
 function BookmarkApp() {
-  return <div className="bookmark-app">This is the BookmarkApp</div>;
+  return <div className="bookmark-app">This will be the BookmarkApp</div>;
 }
 export default BookmarkApp;

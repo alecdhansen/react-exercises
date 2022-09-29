@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import BlogPostForm from "./components/BlogPost/BlogPostForm";
-import ContactListApp from "./components/ContactListApp/ContactListApp";
+import ContactList from "./components/ContactListApp/ContactList";
 import BlogReadingSite from "./components/BlogReadingSite/BlogReadingSite";
 import BookmarkApp from "./components/BookmarkApp/BookmarkApp";
 import BlogCMS from "./components/BlogCMS/BlogCMS";
@@ -11,17 +11,17 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 function App() {
-  const [page, setPage] = useState("BlogPostForm");
+  const [page, setPage] = useState("a");
   let content;
-  if (page === "BlogPostForm") {
+  if (page === "a") {
     content = <BlogPostForm />;
-  } else if (page === "ContactListForm") {
-    content = <ContactListApp />;
-  } else if (page === "BlogReadingSite") {
+  } else if (page === "b") {
+    content = <ContactList />;
+  } else if (page === "c") {
     content = <BlogReadingSite />;
-  } else if (page === "BookmarkApp") {
+  } else if (page === "d") {
     content = <BookmarkApp />;
-  } else if (page === "BlogCMS") {
+  } else if (page === "e") {
     content = <BlogCMS />;
   }
 
@@ -37,7 +37,7 @@ function App() {
               variant="primary"
               type="button"
               className="navBtn"
-              onClick={() => setPage("BlogPostForm")}
+              onClick={() => setPage("a")}
             >
               BlogPostForm(a)
             </Button>{" "}
@@ -45,15 +45,15 @@ function App() {
               variant="primary"
               type="button"
               className="navBtn"
-              onClick={() => setPage("ContactListForm")}
+              onClick={() => setPage("b")}
             >
-              ContactListForm(b)
+              ContactList(b)
             </Button>{" "}
             <Button
               variant="primary"
               type="button"
               className="navBtn"
-              onClick={() => setPage("BlogReadingSite")}
+              onClick={() => setPage("c")}
             >
               BlogReadingSite(c)
             </Button>{" "}
@@ -61,7 +61,7 @@ function App() {
               variant="primary"
               type="button"
               className="navBtn"
-              onClick={() => setPage("BookmarkApp")}
+              onClick={() => setPage("d")}
             >
               BookmarkApp(d)
             </Button>{" "}
@@ -69,7 +69,7 @@ function App() {
               variant="primary"
               type="button"
               className="navBtn"
-              onClick={() => setPage("BlogCMS")}
+              onClick={() => setPage("e")}
             >
               BlogCMS(e)
             </Button>{" "}

@@ -1,9 +1,11 @@
+import Alert from "react-bootstrap/Alert";
+
 function BlogDisplay({ blogPost }) {
   return (
-    <div>
-      <h1>{blogPost.title}</h1>
+    <Alert variant="success" className="div33">
+      <Alert.Heading>{blogPost.title}</Alert.Heading>
       <p>{blogPost.content}</p>
-    </div>
+    </Alert>
   );
 }
 

@@ -1,7 +1,7 @@
 import Table from "react-bootstrap/Table";
 
-function NameTable({ table }) {
-  const tableContent = table.map(
+function NameTable({ contact }) {
+  const contactContent = contact.map(
     ({ firstName, lastName, address, number, id }) => (
       <tr key={id}>
         <td>
@@ -16,7 +16,7 @@ function NameTable({ table }) {
   return (
     <div className="div2">
       <Table striped bordered hover className="table2">
-        <tbody className="body2">{tableContent}</tbody>
+        <tbody className="body2">{contactContent}</tbody>
       </Table>
     </div>
   );
