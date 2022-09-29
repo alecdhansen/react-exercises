@@ -25,7 +25,7 @@ const INITIAL_BLOGS = [
 
 function BlogReadingSite() {
   const [blogs, setBlogs] = useState(INITIAL_BLOGS);
-  const [blogPost, setBlogPost] = useState([]);
+  const [blogPost, setBlogPost] = useState();
   const displayPost = (id) => {
     const index = blogs.findIndex((blog) => blog.id === id);
     const activeBlogPost = blogs[index];
@@ -34,7 +34,7 @@ function BlogReadingSite() {
   return (
     <div className="blog-reading-site">
       <BlogList blogs={blogs} displayPost={displayPost} />
-      <BlogDisplay blogPost={blogPost} />
+      {blogPost && <BlogDisplay blogPost={blogPost} />}
     </div>
   );
 }
