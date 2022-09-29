@@ -3,7 +3,7 @@ import { useState } from "react";
 import BlogPostForm from "./components/BlogPost/BlogPostForm";
 import ContactListApp from "./components/ContactListApp/ContactListApp";
 import BlogReadingSite from "./components/BlogReadingSite/BlogReadingSite";
-import BookmarkApp from "./components/BookmarkApp/BoomarkApp";
+import BookmarkApp from "./components/BookmarkApp/BookmarkApp";
 import BlogCMS from "./components/BlogCMS/BlogCMS";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";

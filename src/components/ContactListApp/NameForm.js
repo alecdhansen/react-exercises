@@ -26,13 +26,9 @@ function NameForm({ addTable }) {
       id: nanoid(),
     };
     addTable(newTable);
-    clearInputs();
     setState(INITIAL_STATE);
   };
 
-  function clearInputs() {
-    return setFirstName(""), setLastName(""), setAddress(""), setNumber("");
-  }
   return (
     <div className="div2">
       <Form onSubmit={handleSubmit} className="form2">
@@ -89,12 +85,7 @@ function NameForm({ addTable }) {
             onChange={(e) => setNumber(e.target.value)}
           />
         </InputGroup>
-        <Button
-          variant="success"
-          className="btn2"
-          type="submit"
-          onClick={() => clearInputs()}
-        >
+        <Button variant="success" className="btn2" type="submit">
           Submit
         </Button>
       </Form>

@@ -34,7 +34,7 @@ function BlogReadingSite() {
   return (
     <div className="blog-reading-site">
       <BlogList blogs={blogs} displayPost={displayPost} />
-      <BlogDisplay />
+      <BlogDisplay blogPost={blogPost} />
     </div>
   );
 }

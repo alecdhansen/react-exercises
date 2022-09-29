@@ -47,3 +47,10 @@
 .form2 {
   width: 30%;
 }
+.div3 {
+  display: flex;
+  justify-content: center;
+}
+.blog-list3 {
+  width: 80%;
+}
