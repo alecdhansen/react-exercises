@@ -11,7 +11,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 function App() {
-  const [page, setPage] = useState("a");
+  const [page, setPage] = useState("e");
   let content;
   if (page === "a") {
     content = <BlogPostForm />;

@@ -33,16 +33,9 @@ function BookmarkApp() {
         </ListGroup>
       </>
     ));
-  const filterTags = (e) => {
-    if (e.target.value === "all") {
-      setFilter(null);
-    } else {
-      setFilter(e.target.value);
-    }
-  };
   const tagList = [...new Set(bookmarkList.map((bookmark) => bookmark.tag))];
   const tagListHTML = tagList.map((tag, index) => (
-    <Button key={index} value={tag} onClick={filterTags} className="btn2-4">
+    <Button key={index} onClick={(e) => setFilter(tag)} className="btn2-4">
       {tag}
     </Button>
   ));
@@ -94,7 +87,7 @@ function BookmarkApp() {
       </Form>
       <div className="filter4">
         <p>Filter by Tag:</p>
-        <Button onClick={filterTags} value="all" className="btn1-4">
+        <Button onClick={(e) => setFilter(null)} className="btn1-4">
           All
         </Button>
         {tagListHTML}
